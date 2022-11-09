@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //document.write("환영합니다"); //<body> 브라우저 화면에 결과를 출력 문법
+            
+        //변수 선언
+        var age;
+        age = 10;
+        document.write(age);
+
+        //줄바꿈 태그 (태그의 기능을 수행해라)
+        document.write("<br>");
+        
+        //출력과 줄바꿈 동시에 사용
+        age=20;
+        document.write(age + "<br>");
+
+        //var 형식은 타입체크를 하지 않는다
+        age="Hello";
+        document.write(age + "<br>");
+
+        //같은 이름으로 변수를 여러번 선언 가능 (마지막에 선언한 값만 남는다)
+        var age = "안녕";
+        document.write(age + "<br>");
+
+        //undifined
+        var name;
+        document.write(name + "<br>");
+        document.write(name + "<br>");
+        document.write(name + "<br>");
+        document.write(name + "<br>");
+
+        //var 선언된 변수의 호이스팅(hoisting)
+        name = "리미"; 
+        name = '빈이';
+        
+        //변수는 대소문자 구분
+
+        //ES6
+        //var, let, const
+
+        //let : 중복되지 않는 용도로 사용하고 싶을 때 사용
+        
+        let num;
+        num = 1;
+        document.write(num+"<br>");
+
+        num = 100;
+        document.write(num+"<br>")
+
+        num = "리미"
+        document.write(num+"<br>")
+
+       // let num;
+       // num = 1000;
+       // document.write(num+"<br>");
+
+
+</script>              
+     <!--<script src="myscript.js"></script>
+    <script>
+        alert("Hello world!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    </script>-->
+
+
+</head>
+
+<body>
+    <!--<button type="button" onclick="javascript:alert('hihi hihi hey!!!~~~')">경고창 실행</button>-->
+</body>
+</html>
