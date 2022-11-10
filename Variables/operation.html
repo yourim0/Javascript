@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            border-spacing: 0;
+        }
+
+        .blue{
+            color: blue;
+        }
+
+        .red {
+            color: red;
+            font-size: 20px;
+        }
+
+        .odd{
+            background-color: aqua;
+        }
+
+        .even{
+            background-color: yellow;
+        }
+    </style>
+    <script>
+
+        //연산자 우선순위를 지정해주어야 한다.
+        /*let num1 =10;
+        let num2 =20;
+        let name= "리미";
+        let age = 20;
+
+        + : 문자열 + 문자열 결합 , 문자열 + 숫자, 연산 
+
+        document.write("이름 : " + name + "나이 : " + age + "<br>");
+
+        document.write("num1 + num2 : "+(num1+num2)+"<br>");*/
+
+        //하나의 변수에 문자열 
+        //script는 태그를 
+        /*let str = "<table border='1'>" //""''구분 해야함
+        str += "<tr>";
+        str += "<td>1</td><td>2</td><td>3</td>";
+        str += "</tr>";
+        str += "</td>";
+
+        document.write(str);*/
+
+        /*let weight = 74;
+        let height = 180;
+
+        let result = (height - 100) * 0.9;
+
+        document.write("적정체중은 : " + result + " 이며, 현재 체중은 " + (weight - result)+ "초과 입니다.");
+*/
+
+        //****prompt
+        /*let height = prompt("키를 입력하세요", "0"); //기본값
+        let weight = prompt("몸무게를 입력하세요","0");
+
+        let result= (height - 100) * 0.9;
+        document.write("적정체중은 : " + result + " 이며, 현재 체중은 " + (weight - result)+ "초과 입니다.");
+*/
+
+
+//page58 -1
+/*      var price1 = 3000;
+        var price2 = 6000;
+        var price3 = 3000;
+        var million = 10000;
+        var total = (price1+price2+price3);
+        var result = (total > million ? (million-total)+"원 초과입니다." : "돈관리 잘했어요");
+        document.write(result);
+
+//page58 -2 
+        document.write("<br><br>");
+        
+        let four = prompt("4분기 판매량을 입력하세요","0");
+
+        let one = 1200;
+        let two = 1300;
+        let three = 1000;             
+        let avg = (one+two+three) /3
+        
+        let result2 = (four >= avg ? "판매량이 평균 이상입니다" : "판매량이 평균 미달입니다");
+        document.write(result2);*/
+
+        //조건식
+        //0 이면 false 나머지 값은 모두 true
+        //""이면 flase 나머지 값은 모두 true
+        //undifined 이면false
+
+      /*  let num=3;
+        if(num){
+            document.write(num);
+        }
+
+        let num=0;
+        if(num){ //false
+        document.write(num);
+        }                                                                                      
+
+        if("Hello"){
+            document.write("Hello!!!!!")
+        }
+
+        //****confirm
+
+        confirm("선택");
+        confirm("정말 파일을 삭제 하시겠습니까?"); //확인 클릭: true, 취소:false 반환
+
+         /* if(result){
+            document.write("파일이 삭제 되었습니다.")
+        }else{
+            document.write("파일 삭제")
+        }
+
+        let site = prompt("네이버, 다음, 네잍 구글 중 즐겨 사용하는 사이트는?","");
+        var url;
+
+        switch(site){
+            case "구글":url="www.google.com";
+            break;
+            case "다음":url="www.daum.net";
+            break;
+            case "네이버":url="www.naver.com";
+            break;
+            case "네이트":url="www.nate.com";
+            break;
+            default: alert("보기에 없는 사이트 입니다.")   
+        }
+
+        if(url){
+            location.href = "https://" + url;
+        }
+        //변수
+        //while(변수로 조건식){
+        //  실행문
+        //  변수를 사용한 즈감식 
+        //}
+
+
+ /*css와 사용 (연산 후 디자인반영)
+       var i =30;
+       while (i>=10) {
+        if(i % 2==0){
+            document.write("<p class='blue'>" + i + "<p>");
+        }else{
+            document.write("<p class='red'>"+i+"</p>");
+        }
+        i--;
+       } */
+
+         
+ /*
+       var i=1;
+       while(i <=9 ){
+        document.write("5X"+i+"="+i*5,"<br/>")    
+        i++;   
+       };*/
+
+
+        /*let num=1;
+        let t = "<table border = '1'>"
+        
+            for(let i = 1;i<=9; i++){
+                t += "<tr>"
+                for(let j = 1;j<=9;j++){
+                    if(i%2==1){
+                        t += "<td class='red'>" +num +"</td>" //행의 짝 홀수만 분별
+                    }else{
+                        t += "<td class='blue'>" +num +"</td>"
+                    }
+                    i*j;                
+                }
+                t += "</tr>"            
+            }
+            t += "</table>"
+
+            document.write(t); */
+
+
+
+
+            document.write("<h1>구구단표<h1>")
+            let t = "<table class=table border = 1>"
+        
+            for(let i = 1;i<=9; i++){
+                t += "<tr>"
+                for(let j = 1; j<=9; j++){
+                    t += "<td>" +i*j +"</td>"    
+                }                                                                     
+                t += "</tr>"            
+            }
+            t += "</table>"
+
+            document.write(t); 
+
+
+            document.write("<h1>구구단표<h1>")
+            document.write("<table width=50%>")
+        
+            for(let i = 1;i<=9; i++){
+                if(i%2==1){
+                    document.write("<tr class='odd'>")
+                }else{
+                    document.write("<tr class='even'>")
+                }
+                for(let j = 1; j<=9; j++){
+                    document.write("<td>" +i*j +"</td>")    
+                }
+                document.write("</tr>")            
+            }
+            document.write("</table>")
+
+            
+
+
+        </script>
+</head>
+
+<body>
+
+</body>
+</html>
