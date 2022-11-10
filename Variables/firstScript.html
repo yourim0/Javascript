@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .blue{
+            color: blue;
+        }
+
+        .red {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
 
     <script>
-
+/*
         //document.write("환영합니다"); //<body> 브라우저 화면에 결과를 출력 문법
             
         //변수 선언
@@ -33,22 +43,28 @@
         //undifined
         var name;
         document.write(name + "<br>");
-        document.write(name + "<br>");
-        document.write(name + "<br>");
-        document.write(name + "<br>");
+
 
         //var 선언된 변수의 호이스팅(hoisting)
-        name = "리미"; 
         name = '빈이';
         
         //변수는 대소문자 구분
 
         //ES6
         //var, let, const
+//------------------------------------------------------------------------------------------------------------
+
+        //var :
+        //1. 같은 이름으로 변수 선언가능
+        //2. 호이스팅 가능
+        //3. 전역변수
 
         //let : 중복되지 않는 용도로 사용하고 싶을 때 사용
-        
-        let num;
+        //1. 같은 이름으로 변수 선언 불가
+        //2. 호이스팅 불가
+        //3. 블록레벨 스코프 (지역변수)
+
+        /*let num;
         num = 1;
         document.write(num+"<br>");
 
@@ -58,10 +74,36 @@
         num = "리미"
         document.write(num+"<br>")
 
+        //오류발생 
        // let num;
        // num = 1000;
        // document.write(num+"<br>");
 
+       var x = 1; //
+
+       if(true){
+        var x=5; //전역변수처럼 사용된다
+       }
+
+       document.write(x + "<br>");//5
+
+       let y=1; //전역변수
+
+       if(true){
+        let y=5; //블록영역 내에서만 사용가능
+       }
+
+       document.write(y+"<br>");//1
+
+       const name = 'yourim';
+       document.write(name+"<br>");
+
+       //브라우저 화면 안나오면 개발자모드 오류 반드시 확인
+       //name = 'yourim';
+       //document.write(name+"<br>"); */
+        
+
+      
 
 </script>              
      <!--<script src="myscript.js"></script>
