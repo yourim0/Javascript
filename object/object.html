@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* date 함수
+        let today = new Date(); //내장 객체 사용//객체 : 속성과 기능
+        document.write(today.getFullYear() + "<br>");
+        document.write(today.getMonth()+1+"<br>"); //0~11월
+        document.write(today.getDate()+"<br>");//0~6
+
+        let day = today.getDay()
+
+       
+        switch(day){
+            case 0 :document.write("일요일");
+            break;
+            case 1 :document.write("월요일");
+            break;
+            case 2 :document.write("화요일");
+            break;
+            case 3 :document.write("수요일");
+            break;
+            case 4 :document.write("목요일");
+            break;
+            case 5 :document.write("금요일");
+            break;
+            case 6 :document.write("토요일");
+            break;
+        }
+        document.write("<br>=====================================<br>");
+
+
+        today.setFullYear(2000);
+        today.setMonth(1);
+        today.setDate(12);
+
+        document.write(today.getFullYear() + "<br>");
+        document.write(today.getMonth()+1+"<br>"); //0~11월
+        document.write(today.getDate()+"<br>");//0~6
+        //document.write(today.getDay()+"<br>");//0~6
+
+
+        switch(day){
+            case 0 :document.write("일요일");
+            break;
+            case 1 :document.write("월요일");
+            break;
+            case 2 :document.write("화요일");
+            break;
+            case 3 :document.write("수요일");
+            break;
+            case 4 :document.write("목요일");
+            break;
+            case 5 :document.write("금요일");
+            break;
+            case 6 :document.write("토요일");
+            break;
+        }
+
+        //생성시점에 날짜 입력
+        let start = new Date(2020,7,1);
+
+        document.write("<br>=====================================<br>");
+
+        document.write(start.getFullYear() + "<br>");
+        document.write(start.getMonth()+1+"<br>"); //0~11월
+        document.write(start.getDate()+"<br>");//0~6
+        document.write(start.getDay()+"<br>");//0~6*/
+
+      /*  var today=new Date();
+        var nowYear = today.getFullYear();
+
+        var theDate = new Date(nowYear,11,31); //20221231
+        var diffDate = theDate.getTime() - today.getTime();
+
+        var result = Math.ceil(diffDate / (60*1000 * 60* 24));
+        document.write("D-day: " + result +"일 남앗당!!!") */
+
+
+        //math 함수 
+        Math.abs() // 절대 값
+
+        //난수 출력 
+        //(int)(Math.random() * 10) + 1 //1~10
+
+        for(let i = 1; i <=10;i++){
+            let ran = Math.floor(Math.random()*10)+1;
+            document.write(ran+ "<br>")
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
