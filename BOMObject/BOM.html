@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // BOM 객체는 생성없이 이름 그대로 사용한다.
+        // window, document, location -window.location.href, history-window.history.back(), screen, navigation 객체
+
+        // window.open(결과화면,창의 이름,창의 옵션(크기, 메뉴표시..))
+
+        // window.open("http://www.naver.com","naver","width=350, height=400, \
+        // left=50, top=50, scrollbars=no")
+
+        //-----------------------p129
+        var phoneNum="010-2345-1234";
+        var result_1 = phoneNum.substring(0,phoneNum.length -4);
+        document.write(result_1,"****<br>")
+
+        var imgSrc="imgs/bnt_out.jpg";
+        var result_2 = imgSrc.replace("out","over")
+        document.write(result_2,"<br>");
+
+        var menu = ["짜장면","돈가스","된장국","김치찌개","회덮밥"];
+        var menuNum=Math.floor(Math.random()*menu.length);
+        var result=menu[menuNum];
+        document.write(result);
+
+        
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // alert("메세지전달\n주의 하세요") //\n 줄바꿈 표현 가능, 확인 클릭해야 다음 코드진행
+
+        // let num1 = parseInt(prompt("숫자입력","")); //type이 문자(숫자로 형변환)
+        // let num2 = parseInt(prompt("숫자입력","0"));
+
+        // document.write(num1+num2);
+        // confirm("선택하세요");
+
+        // setInterval(실행문(익명함수),시간간격) 무한반복
+        // let count= 0;
+        // let auto = setInterval(function() {
+        //     count++;
+        //     console.log(count);
+        // }, 1000);
+
+        //timeout 함수는 딱 한번만 실행된다.
+        // let count=0;
+        // let auto2=setTimeout(function(){
+        //     count++;
+        //     console.log(count)
+        // },3000)
+
+        // setInterval(function(){
+        //     let timer = new Date();
+        //     let h = timer.getHours();
+        //     let m = timer.getMinutes();
+        //     let s = timer.getSeconds();
+        //     document.getElementById("clock").innerHTML=h +":"+ m +":"+s;
+        // },1000);
+
+        // window객체명은 생략가능
+        // location
+        // 1.페이지 이동 : location.href=주소값
+        // 2.페이지 새로고침 : location.reload();
+
+        // location.href="http://www.kakao.co.kr"
+        // location.reload();
+
+        //history
+        //브라우저의 페이지 이동 정보를 저장 관리
+
+        // history.back(); //이전페이지
+        // history.forward(); //다음페이지
+
+    </script>
+</head>
+<body>
+    <!-- <h1>alert 기능 테스트</h1> -->
+
+    <!-- <button type="button" onclick="clearInterval(auto)">clearInterval</button>  -->
+    <!-- clearInterval 실행시에는 반드시 setInterval을 변수에 담아주어야 한다 -->
+    <!-- <button type="button" onclick="clearTimeout(auto2)">clearInterval</button>  -->
+    <p>디지털 시계</p>
+    <h1 id="clock"></h1>
+
+    <button type="button" onclick="history.back();">history.back()</button>
+    <button type="button" onclick="history.forward();">history.forward()</button>
+ 
+</body>
+</html>
