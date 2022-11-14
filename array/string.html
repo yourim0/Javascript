@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = new String("Hello");
+        // console.log(str);
+
+        let str2="world";
+        // console.log(str2);
+
+        let t = "Hello Thank you good luck to you";
+        console.log(t.match("luck"));
+        console.log(t.match("lucks")); //없는 글자 찾으면 null반환
+
+        console.log(t.search("you")); //있으면 인덱스 반환
+        console.log(t.search("yous")); //없으면 -1 반환
+
+
+        //p.109
+
+        var userName = prompt("당신의 영문 이름은?","");
+
+        var upperName = userName.toUpperCase();
+        document.write(upperName,"<br>");
+
+        var userNum = prompt("당신의 연락처는?", "");
+
+
+//substring(시작인덱스, 끝인덱스) : 문자열의 일부를 추출 
+//substring(시작인덱스) : 시작인덱스부터 전체를 추출 
+
+        var result=userNum.substring(0,userNum.length -4) + "****";
+        document.write(result,"<br>");
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
