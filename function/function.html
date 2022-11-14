@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //함수
+        //1. function으로 선언된 함수는 호이스팅 되어진다.
+        //function 함수명(매개변수1,...){
+        //     실행문;
+        //      return 리턴값;
+        // }
+
+        // let a2=add(5,8);
+        // console.log(a2); //함수의 hoisting
+
+        // function add(x,y){
+        //     return x + y;
+        // }
+
+        // let a=add(10,20);
+        // console.log(a);
+
+        //2. 함수의 표현식(익명함수)
+        //  함수 표현식은 hoisting 이 불가하다
+        // add(5,8);
+
+        // let add=function(x,y){
+        //     return x + y;
+        // }
+
+        // let a=add(10,20);
+        // console.log(a);
+
+
+        //3. 생성자함수
+        // hoisting 이 불가하다
+        //let add=new Function('x','y','return x + y')
+        //let a = add(10,20);
+        //console.log(a);
+
+
+        //4. 화살표 함수
+        //let add= (x,y) => 실행문;
+
+        let add=(x,y) => x+y; //출력함수가 아니면 모두 return 이 생략된것.
+        let a = add(10,20);
+        console.logI(a);
+        
+        
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
