@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //** 함수, 객체 매우중요 **
+        //객체
+        // 객체란 이름(key,name)과 값(value)로 구성된 프로퍼티의 집합
+        // 원시타입(primitive type)을 제외한 모든 것이 객체(Object)로 정의된다
+
+
+        //객체의 정의와 프로퍼티 참조방식 
+        //1. object.property (Dot Notation)
+        //2. object['property'] (Bracket Notation)
+        //let obj=[]이거는 배열 헷갈리면 x
+
+
+       /*객체의 정의
+
+        let obj={
+            cat:"mcow", //속성:값 
+            dog:"woof"
+        }
+
+
+        //객체의 사용(참조) 1 (Dot Notation)
+        console.log(obj.dog) //참조변수.property (참조하는 것은 값이다.)
+        console.log(obj.cat)
+
+        //객체의 사용 2 (Bracket Notation)
+        console.log(obj["cat"]); //key 값을 문자열로 입력
+        console.log(obj["dog"])
+
+        //두가지 방식의 차이점 Bracket방식은 
+        //변수 자체에 문자열을 넣었을 경우 변수명으로 입력이 가능하다. 
+        let cat = "cat";
+        let dog = "dog";
+        console.log(obj[cat]);
+        console.log(obj[dog]); */
+
+
+        /*익명함수 방식 함수 정의
+        //`` : 템플릿리터럴 : 내장된 표현식을 허용하는 문자열 리터럴
+        let obj = {
+            cat:"mcow",
+            dog:"woof",
+            animal:function(){
+                return `현재 동물은 ${this.cat}과 ${this.dog}이 있습니다.`;
+            } //this: 현재 객체가 정의 되어있는 변수를 의미
+        }*/
+
+         //내부의 객체에 있는 함수를 호출
+        //console.log(obj.animal());
+
+
+        
+       //객체의 정의
+        let obj={
+            cat:"mcow", //속성:값 
+            dog:"woof"
+        }
+
+        /*객체에 값 추가
+
+        obj.cow="moo";
+        obj["pig"] = "onik";
+
+        console.log(obj.cow);
+        console.log(obj.pig);
+
+        //객체에 값 삭제 :delete
+        delete obj.cat;
+        console.log(obj.cat); //undefined */
+
+        //객체에 값 수정
+        obj.cat = "abc";
+        console.log(obj.cat);
+
+        // 객체 데이터 조회
+        //for in
+        for(let key in obj){ //반환되는 값이 키값
+            console.log(`key는 ${key}, value는 ${obj[key]}`)
+        } 
+        //-------------------------------------------------------
+
+        /*객체 생성 방식 2
+        //new Object()
+        //값이없는 빈 객체 생성
+
+        let animal = new Object();
+        animal.cat="meow";
+        animal.dog="woof";
+        animal.cow="moo";
+
+        console.log(animal.dog); */obj
+
+        //-------------------------------------------------------
+        
+        //객체 생성 방식 3
+        //fucntion 키워드
+        //객체 생성자 함수 : 생성을 해야 사용이 가능하다(new)
+
+
+        //자바 생성자의 매개변수와 같은 의미, 초기화  
+        function Animal(name,sound){//함수와 구별위해 대문자사용
+            this.name = name;
+            this.sound = sound;
+    
+
+        //함수형 객체생성방식은 = 을 사용
+        this.animal = function(){
+                return `현재 동물은 ${this.name}과 ${this.sound}이 있습니다.`;
+            }
+        }
+
+        //생성
+        let cat = new Animal("cat","meow");
+        let dog = new Animal("dog","woof");
+        
+        console.log(cat.animal());
+        console.log(dog.animal());
+
+    </script>
+</head>
+<body>
+   
+    
+</body>
+</html>
