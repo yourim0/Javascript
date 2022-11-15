@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <!--태그를 객체처럼 사용한다. obj.xxx 처럼 사용 가능-->
+    <script>
+        //1. 내장객체, 2. BOM, 3. 사용자 정의 객체, 4. DOM (JQUERY)
+        //가장 많이 활용 : getElementById, getElementsByTag
+        //head 내부에 사용할 때는 항상 window.onload내에 작성해야 한다.
+        window.onload = function(){
+            // let hTag = document.getElementById("selector"); //객체 형식으로 변환
+            // hTag.style.color = "red";
+        }
+    </script>
+</head>
+
+<body>
+    <!--dom 은 태그를 제어하기 때문에 body 내부에 script를 사용하는 것을 선호. -->
+    <!--<h1 id="selector">선택자</h1>-->
+
+    <h1>선호하는 음식</h1>
+    <div id="food_1">
+        <h2 id="title">한식</h2>
+        <ol>
+            <li id="kimchi">
+                <a href="#">김치</a>
+            </li>
+            <li>불고기</li>
+            <li>비빔밥</li>
+        </ol>
+    </div>
+    <div id="food_2">
+        <h2>양식</h2>
+        <ol id="list">
+            <li>돈까스</li>
+            <li id="pizza">피자</li>
+            <li>파스타</li>
+        </ol>
+    </div>
+
+    <p id="info">안녕하세요 dom 입니다.</p>
+
+    <!--자바스크립트 활용 (핸들러는 대부분 함수를 정의)
+    <button type="button" onclick="핸들러(함수)">p태그 배경색 넣기</button>-->
+
+    <button type="button" onclick="change()">p태그 배경색 넣기</button>
+
+    <script>
+            function change(){
+                let pTag=document.getElementById("info");
+                pTag.style.backgroundColor="pink";
+            }
+
+            //getElementById: 태그의 id 속성값
+            let pbody = document.getElementById("info").innerHTML;//innerHTML : 대상 태그의 몸통부분을 가져온다.
+            console.log(pbody);
+            
+            //let hTag = document.getElementById("selector"); //객체 형식으로 변환
+            //hTag.style.color = "red";
+            //hTag.style.fontSize = "50px";
+
+            //getElementsByTagName(태그명) => 배열형식으로 반환
+            
+            let hTag = document.getElementsByTagName("h1")
+            hTag[0].style.color = "green";
+            document.getElementsByTagName("h1")[0].style.color="green"; //변수에 받지 않아도된다
+
+            document.getElementById("info").innerHTML = "HI DOM"
+
+            let myList = document.getElementById("food_1").getElementsByTagName("li"); //id를 사요앟면 대상 객체를 콕 찍어서 가져올 수 있대
+            //앞에있는 대상이 가리키는 li 태그
+            myList[1].style.backgroundColor = "aqua";
+
+    </script>
+    
+</body>
+</html>
