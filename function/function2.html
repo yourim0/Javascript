@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var color = ["yellow","white","aqua","purple"];
+
+        // var i=0;
+        // function changeColor(){
+        //     i++;
+        //     if(i>=color.length){
+        //         i=0;
+        //     }
+        //     //document.getElementById()태그를 객체 형태로 가져오는 역할
+        //     var bdoyTag = document.getElementById("theBody");
+        //     //객체(태그)에 css효과를 적용한다.
+        //     //객체.style.스타일속성 
+        //     bdoyTag.style.backgroundColor=color[i];
+        // }
+
+        //문자비교
+        //java
+        //if(문자.equals(문자))
+        //javascript
+        //if(문자==문자)
+
+      //  function sum(){
+        //     let sum = arguments[0] + arguments[1] + arguments[2];
+        //    document.write(sum);
+        //}
+
+        //sum(10,20,30)
+
+        //1
+        // let sum1=0;
+        // function sum(){
+        //     for(let i=0;i < arguments.length;i++){
+        //         sum1 += arguments[i];
+        //     }
+        //     document.write(sum1);
+        // }
+        // sum(10,20,30,40,50); //가변인자
+
+        // //1번과 결과가 동일하다
+        //  let sum2=0;
+        //  function sum(...number){
+        //     for(let i=0;i<number.length;i++){
+        //         sum2 += number[i];
+        //     }
+        //     document.write(sum2);
+        //  }
+
+        //  sum(10,20,30,40,50);
+
+
+        //prompt의 기본형은 문자형
+        //문자->숫자 형변환
+        //parseInt(prompt())
+        //Number(prompt())
+
+
+
+        // function testAvg(arrData){
+        //     let sum=0;
+        //     for(let i=0;i<arrData.length;i++){
+        //         sum += Number(prompt(arrData[i] + " 점수는?","0"));
+        //     }
+        //     let avg = sum/arrData.length;
+        //     return avg;
+        // }
+
+        // let arrSubject=["국어","수학"];
+        // let result=testAvg(arrSubject);
+
+        // document.write("평균 점수는 " + result + "점 입니다.")
+
+
+        //즉시실행함수(=일회용함수, 자동호출함수)
+        //형식
+        (function(x){
+            console.log(x*x); //2*2=4
+        }(2)); //호출시점에 바로 매개변수 x값을 넣어준다. //자동호출함수
+        //마지막 괄호안에 () 작성
+
+
+        (mySquare = function(x){  //함수이름
+            console.log(x*x);
+        })(3); //마지막 괄호밖에 () 작성
+
+        mySquare(4);
+
+
+        // var mySquare = (function(x){ //리턴값을 받는 변수
+        //     return x*x;
+        // })(5);
+
+        // console.log(mySquare);
+
+        
+
+    </script>
+</head>
+<body id="theBody">
+    <!-- <button onclick="changeColor();">배경색바꾸기</button> -->
+
+    
+</body>
+</html>
