@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqurey 선택자</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--스크립트 위치가 head 아래일 때는 항상 $(document).ready(function(){}) 내에 작성해야 한다-->
+    <script>
+      //  위치 1. 상단일 때 $(document).ready(function(){
+      /*  $(function(){
+            $("#txt").css("color","red"); //요소를 선택, js의 document.getElementgetId("txt") 와 같음 //.css("color","red"): css속성추가 (tTag.style.color = "red")와 동일
+        }); */
+
+        $(function(){
+          //$("h1").next().css("color","red");
+          //$("h1").parent().css("border","1px solid green");
+          //$("#inner_wrap h1").css("color", "aqua"); //하위요소 선택자
+          //$("#inner_wrap > p").css("color","pink");
+          //$("h1").prev().css("color","yellow");
+          //$("h1").prev().css({"color":"red","font-size":"40px"});
+          //$("h1").prevAll().css({"color":"red","font-size":"40px"});
+          //$("h1").nextAll().css({"color":"green","font-size":"40px"});
+          $("h1").siblings().css("background-color","coral");
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div id = "inner_wrap">
+        <p id="txt">JQuery Start</p>
+        <p class="tit">Class Selector</p>
+        <h1>그룹 선택자</h1>
+        <h2>요소 선택자</h2>
+        <h3 class="tit">종속 선택자</h3>
+    </div>
+
+    <script>
+        //위치2. 하단일 때.$(document).ready 필요없음
+     /* $("#txt").css("color","red");   
+        $(".tit").css("color","blue");     
+        $("h2").css("color", "green");
+        $("h1,h2").css("font-size","50px");
+        $("h3.tit").css("border","1px solid black")  */
+    </script>
+
+    
+</body>
+</html>
