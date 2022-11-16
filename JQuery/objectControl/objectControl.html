@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체조작 메소드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .red {background-color: red;}
+        .blue {background-color: blue;}
+        .green{background-color: green;}
+    </style>
+    <script>
+                $(function(){
+
+        //객체조작 메소드 p.218
+        //값을 읽어오는 메소드와 쓰는 메소드가 페어구조로 이루어짐
+        //생성, 복제, 삭제, 속성 변화
+
+        //html()=>태그의 정보를 읽기
+        //html("값") => 태그의 정보를 변경
+        //text()
+        //text("값")
+        //<p> 내용 </p> //<p> : 태그 내용 : 텍스트
+
+        //일반태그 : <span> => text()
+        //폼 태그  : <form> <input> <textarea> =>var()
+
+        //css() : css효과를 직접정의해서 적용
+        //addClass() :<style>에 작성된 class 속성을 가져와서 적용
+
+        //데이터에 직접적으로 적용, 화면에서 동적으로 데이터 변환이 이루어질 수 있음
+        //상태정보를 가져와서 2차적인 액션 주기 위함
+
+
+
+        
+        //attr() 선택한 요소의 지정한 속성값을 가져온다
+        //let srcval = $("img").attr("src");
+        //console.log(srcval);
+
+        //src의 속성 값을 바꿈
+        //$("img").attr("src","imgs/game_2.jpg");
+
+        //$("#p1").addClass("red");
+        //$("#p2").addClass("blue");
+        //$("#p3").removeClass("green"); //이게 왜 동적 제거지....? -> 개발자도구 요소탭에서 적용 확인가능
+        
+
+        //form태그에서 값을 가져오고 싶을 때 .val()
+        //일반 태그 값은 .text()
+        // let name= $("#user_name").val();
+        // console.log(name);
+       
+       
+        // $("#user_name").val("비니");
+
+
+        //---------------------prop----------------------------------------
+        //상태를 확인해서 선택이 되어있는지에 따른 값 반환
+        //<input type="checkbox"> //checked
+        //<select name = "se_1" id="se_1" //selected, selectedIndex
+        //hasClass() true/false 반환
+
+        let result1 = $("#chk1").prop("checked");
+        console.log(result1); //false 반환
+
+        
+        let result2 = $("#chk2").prop("checked");
+        console.log(result1); //false 반환
+
+
+        let result3 = $("#chk3").prop("checked","true"); //true : 체크가 되어지도록 강제
+        console.log(result1); //false 반환
+
+        //인덱스 번호로 가져오기 
+        let selectedIndex = $("#se_1").prop("selectedIndex");
+        console.log(selectedIndex); //2
+    });
+
+    </script>
+</head>
+<body>
+    <!--<p id="p1">내용1</p> script적용
+    <p id="p2">내용2</p>  script적용
+    <p id="p3" class="green"> 내용3</p> css적용 -element탭 확인
+    <img src="imgs/game_1.jpg" alt="가위"> -->
+
+    <!-- <form>
+        <input type="text" value="리미" id="user_name">
+    </form> -->
+
+    <h1><strong>객체 조작 및 생성</strong></h1>
+   <form action="#" id="form_1">
+      <p>
+         <input type="checkbox" name="chk1" id="chk1">
+         <label for="chk1">chk1</label>
+         <input type="checkbox" name="chk2" id="chk2" checked>
+         <label for="chk2">chk2</label>
+         <input type="checkbox" name="chk3" id="chk3">
+         <label for="chk3">chk3</label>
+      </p>
+      <p>
+         <select name="se_1" id="se_1">
+            <option value="opt1">option1</option>
+            <option value="opt2">option2</option>
+            <option value="opt3" selected>option3</option>
+         </select>
+      </p>
+   </form>
+</body>
+</html>

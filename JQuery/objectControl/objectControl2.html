@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체조작 메소드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+    <!-- p227 수치 조작 메소드 --------------------------->
+    <script>
+        $(function(){
+        //     let w1 = $("#p1").width()
+        //     console.log(w1);
+
+        //     let w2 = $("#p1").innerWidth()
+        //     console.log(w2);
+
+        //     let w3 = $("#p1").outerWidth()
+        //     console.log(w3);
+
+        //     //메소드 체이닝 기법
+        //     $("#p2").outerWidth(100).outerHeight(80);
+
+
+        // p230 position(), offset()--------------------------- 
+        //변수명 앞에 $붙히는건 jquery에서 객체 정보를 받기위한 변수라는 의미 
+        // let $txt1 = $(".txt_1 span");
+        // let $txt2 = $(".txt_2 span");
+        // let $box = $(".box");
+
+        // let off_top = $box.offset().top;
+        // let pos_top = $box.position().top;
+
+        // $txt1.text(off_top); //브라우저로 부터 떨어진 거리 절댓값
+        // $txt2.text(pos_top);//부모로부터 떨어진 거리 상대좌표
+
+        
+        //스크롤이 2000만큼 이동되어 나옴
+        let topoff = $("h1").offset().top;
+        $(window).scrollTop(topoff);
+
+        let sct = $(window).scrollTop(); //값을 넣음녀 지정, 비어두면 읽어오는역할
+        console.log(sct);
+    
+        if(sct == 2000){
+            $("body").css("background-color","coral");
+        }
+
+    });
+
+
+    </script>
+    <style>
+        /* #p1,#p2{
+            width: 100px;
+            height: 50px;
+            padding: 20px;
+            border: 5px solid black;
+        } */
+
+        /* p230 position(), offset()----------------------------------- */
+        /* 기본 8px 마진 값을 가지고 있음. 수치를 사용하는 속성이라면 항상 0으로 세팅 */
+        /*
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #box_wrap{
+            width: 300px;
+            height: 200px;
+            margin: 50px auto 0;
+            position: relative; /*자식요소는 무조건 나를 바라보고 움직인다
+            background-color: pink;
+        }
+
+        .box{
+            width: 50px;
+            height: 50px;
+            position: absolute; /*부모를 기준
+            left: 100px;
+            top: 50px;
+            background-color: beige;
+        } */
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            line-height: 1;
+        }
+
+        /* 내용이 아래쪽으로 내려가게 설정하면 스크롤이 생김 */
+        #wrap{
+            height: 5000px;
+            padding-top: 2000px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+  <!-- <h1>수치조작 메소드</h1>
+  <p id="p1">내용1</p>
+  <p id="p2">내용2</p> -->
+
+<!-- p230 position(), offset() --------------------------->
+  <!-- <div id="box_wrap">
+    <p class="box">박스</p>
+  </div>
+    <p class="txt_1">절대 top위칫값; <span></span></p>
+    <p class="txt_2">상대 top위칫값; <span></span></p> -->
+
+<!-- p232 스크롤바 위치 메서드 --------------------------->
+  <div id="wrap">
+    <h1>위치 메서드</h1>
+  </div>
+
+</body>
+</html>
