@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        $(function(){
+            
+        //p245 이벤트 등록 메서드
+        //    $(".btn1").click(function(){ //단독 이벤트 사용 형식(익명함수)
+        //        $(".btn1").parent().next().css("color","red");
+        //    });
+
+       //     $(".btn2").on({ //그룹이벤트
+        //        "mouseover focus" : function(){
+         //           $(".btn2").parent().next().css("color","green")
+        //        }
+        //    });
+
+            //이벤트 제거 ->콘솔 button -> 이벤트 리스너에서 보여지지 않음
+            // $(".btn1").off("click");
+            // $(".btn2").off("mouseover focus");
+
+
+        // p256 a, form의 click 이벤트 적용시 기본 이벤트 속성을 제거 해야한다.  태그 기본이벤트 차단
+        // $(".btn1").on("click",function(e){
+        //     e.preventDefault();
+        //     $(".txt1").css("color","red");
+        // //return false; 둘 중 하나 선택사용
+        // });    
+
+        // $(".btn2").on("click",function(){
+        //     $(".txt2").css("color","green"); //a태그의 기본 이동이벤트 때문에 안먹음
+        //     return false; //기본 이벤트 삭제
+        // })
+
+        // $(".btn3").on("dblclick",function(){
+        //     $(".txt3").css("color","pink");
+        // })
+
+        // p257
+        //마우스 이벤트
+        //mouseover / mouseout -> hover(mouseover + mouseout)
+
+            // $(".btn1").on({
+            //     "mouseover":function(){
+            //         $(".txt1").css("color","red");
+            //     },
+            //     "mouseout":function(){
+            //         $(".txt1").css("color","black"); //마우스 땠을 때 동작 
+            //     }
+            // });
+
+            // $(".btn2").hover(
+            //     function(){ //over
+            //         $(".txt2").css("color","red");
+            //      },
+            //     function(){ //out 
+            //     $(".txt2").css("color","black");
+            //     }  
+            // );      
+            
+            // //mouseenter / mouseleave
+            // //over: 대상에만 , enter: 대상 포함된 전체 범위 
+            // $(".btn1").on({
+            //     "mouseenter":function(){
+            //         $(".txt1").css("color","red");
+            //     },
+            //     "mouseleave":function(){
+            //         $(".txt1").css("color","black"); 
+            //     }
+            // });
+
+            //mousemove() 마우스가 움직이면 돼
+            //e:이벤트객체(우리가 만들어쓴느게 아니래)
+            // 마우스 움직임이 발생하면 이동한 현재 마우스 포인트의 좌표 정보를 받아올 수있다
+
+            // $(document).on("mousemove",function(e){ 
+            //     $(".posX").text(e.pageX);
+            //     $(".posY").text(e.pageY); 
+            //     //text(), val()차이 알고 있어야 함
+            // });
+
+            //scroll() 스크롤의 움직임
+
+            // $(window).on("scroll",function(){ //현재 스크롤이 움직임이 있을 때 
+            //     let sc_top = $(window).scrollTop(); //스크롤바의 이동 위치값을 가져옴
+            //     let sc_left = $(window).scrollLeft(); //this=window
+
+            //     $(".top").text(sc_top);
+            //     $(".left").text(sc_left);
+
+            //     if(sc_top <= 200){
+            //         $("body").css("background-color","red");
+            //     }else if(sc_top <= 500){
+            //         $("body").css("background-color","yellow")
+            //     }else if(sc_top <= 1000){
+            //         $("body").css("background-color","green")
+            //     }
+            // });
+
+            //focus 커서가 현재 위치에 와있는지 벗어나 있는지
+            // $("#user_id_1").on("focus",function(){
+            //     $(this).css("background-color","pink") //this 이벤트를 발생시키는 주체 (user_id_1)
+            // });
+            // //blur
+            // $("#user_id_1").on("blur",function(){
+            //     $(this).css("background-color","coral")
+            // });
+
+            //change() :blur()이벤트가 발생하는 순간 change이벤트가 발생 : 실시간 타이핑 값은 어려움
+                // $("#rel_site").on("change",function(){
+                //     $(".txt").text($(this).val());
+                // });
+
+                // $("#id").on("change",function(){
+                //     $(".txt").text($(this).val());
+                // });
+
+
+
+            //비속어인지 검증 //실시간으로 읽어옴
+
+            //let words = ["돈","부자","천재"];
+            // $("#id").on("keydown",function(){
+            //     let term = $(this).val(); //입력폼이니까 val사용
+            //     $(".txt").text(term); 
+
+            //     for(let i=0;i<3;i++){
+            //         if(term == words[i]){
+            //             $(".txt").text("사용이 불가한 단어입니다.")
+            //         }
+            //     }
+            // });
+            
+
+
+            });
+
+    
+    </script>
+    <style>
+        /* 스크롤바
+        body{
+            height: 10000px; 
+            width: 5000px;
+        }
+
+        #wrap{
+            position: fixed;
+            left: 10px;
+            top: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <!-- p245 이벤트 등록-->
+    <!-- <p>
+        <button class="btn1">버튼2</button>
+    </p>
+    <p>내용1</p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p> -->
+    
+    <!-- p256 a, form -->
+     <!-- <p><a href="http://easyspub.co.kr/" class="btn1">버튼1</a></p>
+    <p class="txt1">내용1</p>
+    <p><a href="http://easyspub.co.kr/" class="btn2">버튼2</a></p>
+    <p class="txt2">내용2</p>
+    <p><button class="btn3">버튼3</button></p>
+    <p class="txt3">내용3</p>  -->
+
+
+    <!-- p257 마우스 mouseover / mouseout -->
+    <!-- <p><button class="btn1">Mouse Over/Mouse Out</button></p>
+    <p class="txt1">내용1</p>
+    <p><button class="btn2">Hover</button></p>
+    <p class="txt2">내용2</p> -->
+
+    <!--mousemove() 마우스 포인트 이동 시-->
+    <!-- <h1>mousemove</h1>
+    <p>X : <span class="posX">0</span>px</p>
+    <p>Y : <span class="posY">0</span>px</p> -->
+
+    <!--scroll() 스크롤바 이동 시-->
+    <!-- <div id="wrap">
+        <p>scrollTop : <span class="top">0</span>px</p>
+        <p>scrollLeft : <span class="left">0</span>px</p>        
+    </div> -->
+    
+
+
+    <!--focus  / blur-->
+    <!-- <form action="#">
+        <p>
+            <label for="user_id_1">ID</label>
+            <input type="text" name="user_id_1" id="user_id_1">
+        </p>
+    </form> -->
+
+
+    <!--p271 change()-->
+    <!-- <input type="text" name="id" id="id">
+    <br>
+    <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="www.goolgle.com">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p> -->
+    <!-- <h1>금지어 필터링</h1>
+    <label>댓글 : </label><input type="text" name="id" id="id">
+    <p class="txt"></p> -->
+
+
+</body>
+</html>
