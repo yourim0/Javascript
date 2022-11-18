@@ -7,35 +7,64 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
-        //p290 효과 및 애니메이션 메서드
+        
         $(function(){
-            $(".btn2").hide(); //hidden
+            //---------------p290 효과 및 애니메이션 메서드
+            // $(".btn2").hide(); //hidden
 
+            // $(".btn1").on("click",function(){
+            //     $(".box").slideUp(1000,"linear",function(){ //효과주는 함수 포함 요소 (커튼느낌 시간, 가속도, 콜백함수)
+            //         $(".btn1").hide();
+            //         $(".btn2").show();
+            // });
+            // });
+
+            // $(".btn2").on("click",function(){
+            //     $(".box").fadeIn(1000,"swing",function(){
+            //         $(".btn2").hide();
+            //         $(".btn1").show();
+            //     });
+            // });
+
+            // //콜백함수 필요없으면 생략가능
+            // $(".btn3").on("click",function(){
+            //     $(".box").slideToggle(1000,"linear")
+            // });
+
+            //---------------p294 효과 및 애니메이션 메서드 
+                //jquery 애니메이션 에서는 스타일 속성이름을 낙타표기법으로 사용해야함
             $(".btn1").on("click",function(){
-                $(".box").slideUp(1000,"linear",function(){ //효과주는 함수 포함 요소 (커튼느낌 시간, 가속도, 콜백함수)
-                    $(".btn1").hide();
-                    $(".btn2").show();
-                    
-             
+                $(".txt1").animate({marginLeft:"500px",fontSize:"30px"},3000,"linear",function(){
+                    alert("동작 종료")
+                });
             });
 
-
+            $(".btn2").on("click",function(){
+                $(".txt2").animate({marginLeft:"+=50px"},1000,"linear"); //한번 누를 때마다 
             });
-
-
-
 
         });
     </script>
     <style>
-        .content{
+
+        /* .content{
             width: 400px;
             background-color: #eee;
+        } */
+
+        .txt1{
+            background-color: aqua;
         }
+
+        .txt2{
+            background-color: pink;
+        }
+
     </style>
 </head>
 <body>
-    <p>
+    <!-- p290 효과 및 애니메이션 메서드 -->
+    <!-- <p>
         <button class="btn1">slideUp</button> 
         <button class="btn2">fadeIn</button>
     </p>
@@ -50,6 +79,15 @@
         <div class="content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempora sed et. Ut accusantium dolorem, corporis quos temporibus debitis aliquam, molestiae facere atque, maiores explicabo! Et neque totam quos odit!
         </div>
-    </div>
+    </div> -->
+
+
+        <!-- p294 효과 및 애니메이션 메서드  -->
+
+        <p><button class="btn1">버튼1</button></p>
+        <span class="txt1">"500px" 이동</span>
+        <p><button class="btn2">버튼2</button></p>
+        <span class="txt2">"50px"씩 이동</span>
+
 </body>
 </html>
